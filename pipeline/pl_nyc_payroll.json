@@ -1,0 +1,32 @@
+{
+	"name": "pl_nyc_payroll",
+	"properties": {
+		"activities": [
+			{
+				"name": "RunPayrollLoad",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_nyc_payroll_load",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"MinimumFiscalYear": {
+							"value": "@pipeline().globalParameters.gp_fiscalyear",
+							"type": "Expression"
+						}
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-11-22T17:18:40Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

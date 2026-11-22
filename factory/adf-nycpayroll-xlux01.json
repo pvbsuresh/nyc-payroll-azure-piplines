@@ -1,0 +1,22 @@
+{
+	"name": "adf-nycpayroll-xlux01",
+	"properties": {
+		"globalParameters": {
+			"gp_fiscalyear": {
+				"type": "int",
+				"value": 2020
+			}
+		},
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true,
+			"isExplicitlySet": false
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "58be7ca7-f60c-4d5f-b964-4a8dd73d7a3e",
+		"tenantId": "f958e84a-92b8-439f-a62d-4f45996b6d07"
+	}
+}
